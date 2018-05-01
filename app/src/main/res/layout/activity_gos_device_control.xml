@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:fadingEdge="vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="20dp"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:scrollbars="vertical" >
+        
+		
+		<!-- DeviceOnOff(布尔可写) -->
+		 <RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="1dp"
+				android:background="@color/white"
+				android:padding="10dp" >
+		 
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_centerVertical="true"
+					android:text="DeviceOnOff" />
+
+				<Switch
+					android:id="@+id/sw_bool_DeviceOnOff"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:textOff="关闭"
+					android:textOn="开启" />
+					
+		</RelativeLayout>	
+	
+		
+		<!-- TempSet(数值可写) -->
+		 <RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="1dp"
+				android:background="@color/white"
+				android:padding="10dp" >
+		 
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:text="TempSet" />
+				
+				<TextView
+					android:id="@+id/tv_data_TempSet"
+					android:layout_width="110dp"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:textSize="16sp"
+					android:gravity="end" />	
+									
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_below="@+id/tv_data_TempSet"
+					android:layout_marginTop="10dp"
+					android:gravity="center_vertical"
+					android:orientation="horizontal" >
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textSize="16sp"
+						android:text="-20" />
+						
+					<SeekBar
+						android:id="@+id/sb_data_TempSet"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="3"
+						android:max="140" />
+					
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textSize="16sp"
+						android:text="120" />
+				</LinearLayout>
+			
+		</RelativeLayout>			
+	
+		
+		<!-- TempNow(数值只读) -->
+		 <RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="1dp"
+				android:background="@color/white"
+				android:padding="10dp" >
+		 
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_centerVertical="true"
+					android:text="TempNow" />
+
+				<TextView
+					android:id="@+id/tv_data_TempNow"
+					android:layout_width="110dp"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:gravity="end"
+					android:textSize="16sp"
+					android:textColor="@color/gray" />	
+		</RelativeLayout>
+	
+	
+    </LinearLayout>
+
+</ScrollView>
